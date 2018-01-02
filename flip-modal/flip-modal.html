@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录|注册</title>
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./flip-modal.css">
+	<link rel="stylesheet" href="../common.css">
+</head>
+<body>
+	<header>
+		<div><a href="#" class = "log-in"><i class = "fa fa-user-circle-o"></i></a></div>
+	</header>
+	<main>
+		<div class="flip-modal login">
+			<!-- 登录 -->
+			<div class="modal modal-login">
+				<a href="#" class = "close fa fa-close"></a>
+				<div class = "tabs">
+					<a href="#" class="login active">登录</a>
+					<a href="#" class="register">注册</a>
+				</div>
+
+				<div class="content">
+					<div class="errormsg"></div>
+					<form action="/login" method="post">
+						<div class="input-filed">
+							<i class="fa fa-user-o"></i>
+							<input type="text" name = "username" placeholder="用户名">
+						</div>
+						<div class="input-filed">
+							<i href="" class="fa fa-lock"></i>
+							<input type="password" name="password" placeholder="密码">
+						</div>
+						<div class="input-filed">
+							<input type="submit" value="登录">
+						</div>
+					</form>
+			    </div>
+		    </div>
+
+	    	<!-- 注册 -->
+			<div class="modal modal-register">
+				<a href="#" class = "close fa fa-close"></a>
+				<div class = "tabs">
+					<a href="#" class="login ">登录</a>
+					<a href="#" class="register active">注册</a>
+				</div>
+
+				<div class="content">
+					<div class="errormsg"></div>
+					<form action="/register" method="post">
+						<div class="input-filed">
+							<i class="fa fa-user-o"></i>
+							<input type="text" name = "username" placeholder="用户名">
+						</div>
+						<div class="input-filed">
+							<i class="fa fa-lock"></i>
+							<input type="password" name="password" placeholder="密码">
+						</div>
+						<div class="input-filed">
+							<i class="fa fa-lock"></i>
+							<input type="password" name="re-password" placeholder="确认密码">
+						</div>
+						<div class="input-filed">
+							<input type="submit" value="注册">
+						</div>
+					</form>
+			    </div>
+		    </div>
+	   
+	    </div>		
+    </main>
+	<footer></footer>
+	<script src = "./flip-modal.js"></script>
+</body>
+</html>
