@@ -16,6 +16,13 @@ $("header .log-in").addEventListener('click',function(e){
 
 document.addEventListener('click',function(e){
 	$(".flip-modal").classList.remove("show");
+	$$(".modal .errormsg").forEach(function(e){
+			e.innerText = "";
+		})
+	$$(".modal input[name=username],.modal input[name=password],.modal input[name=re-password]").forEach(function(e){
+       e.value = "";
+	})
+
 })
 
 //方法一： 遍历
@@ -54,6 +61,12 @@ $(".flip-modal").addEventListener('click',function(e){
 	}
 	if(e.target.classList.contains("close")){
 		$(".flip-modal").classList.remove("show");
+		$$(".modal .errormsg").forEach(function(e){
+			e.innerText = "";
+		})
+		$$(".modal input[name=username],.modal input[name=password],.modal input[name=re-password]").forEach(function(e){
+           e.value = "";
+		})
 	}
 })
 
