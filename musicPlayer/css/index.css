@@ -1,0 +1,105 @@
+.cover {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    background-size: cover;
+    background-image: url(),center center no-repeat;
+    filter: blur(5px);
+}
+
+.musicBox {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	font-family: cursive;
+	font-size: 16px;
+	color: #f06d6a;
+	width: 360px;
+
+}
+
+.musicBox .music-panel {
+	border: 1px solid #76dba3;
+	padding: 30px 5px 30px 20px;
+	box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.1),0px 2px 10px 0px rgba(0,0,0,0.05);
+	background-color: rgba(255,255,255,0.9); 
+
+}
+
+.music .control {
+	float: left;
+	margin-top: 10px;
+	font-size: 22px;
+	color: #ee8a87;
+}
+.music .control .fa {
+	margin-right: 12px;
+	cursor: pointer;
+}
+
+/*.music .control .fa.disable {
+	opacity: 0.3;
+}*/
+
+.music .info {
+	margin-left: 140px;
+	margin-bottom: 10px;
+}
+
+.music .info .author {
+	font-size: 13px;
+}
+
+.music .info .title {
+	font-size: 18px;
+}
+
+.musicBox .progress {
+    width: 260px;
+}
+
+.musicBox .progress .bar {
+	height: 3px;
+	background-color: rgba(0,0,0,0.2);
+	cursor: pointer;
+}
+
+.musicBox .progress .progress-now {
+	background-color: #ee8a87;
+	height: 3px;
+	width: 0;
+	position: relativ;
+}
+
+.musicBox .time {
+	text-align: right;
+}
+
+.musicBox .list {
+	list-style: none;
+}
+
+.musicBox .list>li {
+    position: relative; 
+    padding: 4px 10px;
+    border: 1px solid rgba(255,255,255,0.8);
+    border-top: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.musicBox .list>li:hover {
+	background-color: rgba(255,255,255,0.5);
+}
+
+/*.musicBox .list>li.playing:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	display: inline-block;
+	width: 8px;
+	height: 30px;
+	background-color: rgba(255,255,255,0.8);
+}*/
