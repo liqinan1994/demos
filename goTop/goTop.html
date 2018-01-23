@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>goTop</title>
+	<style>
+		.main {
+			height: 2000px;
+			text-align: center;
+			border: 1px solid;
+			width: 500px;
+			margin: 0 auto;
+		}
+
+		.goTop {
+			border: 2px solid blue;
+			padding: 10px 20px;
+			position: fixed;
+			bottom: 30px;
+			right: 50px;
+		}
+	</style>
+</head>
+<body>
+	<div class = 'main'>
+		顶点
+		<div class="ct"></div>
+	</div>
+
+	<script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+    	
+		function GoTop($ct){
+			this.ct = $ct;
+			this.target = $("<button class='goTop'>回到顶部</button>");
+			this.creatNode();
+			this.bindEvent();
+			
+		}
+
+		
+
+		GoTop.prototype.bindEvent = function(){
+			var _this = this;
+		    $(window).on('scroll',function(){
+		    	if($(window).scrollTop() >= 200){
+		    		_this.target.show();
+		    	} else {
+		    		_this.target.hide();
+		    	  }            	
+		    })
+		      
+		    this.target.on('click',function(){
+		        $(window).scrollTop(0);
+		    })
+		};
+
+		GoTop.prototype.creatNode = function(){
+			this.ct.append(this.target);
+			this.target.hide();
+			
+		};
+
+		var goTop = new GoTop($('.ct'));	
+    </script>
+</body>
+</html>
